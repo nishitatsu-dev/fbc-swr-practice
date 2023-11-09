@@ -4,7 +4,7 @@ import "./App.css";
 const fetcher = (args) => fetch(...args).then((res) => res.json());
 
 function App() {
-  const url = "httpsa://httpstat.us/200?sleep=2000";
+  const url = "https://httpstat.us/200?sleep=2000";
   const headers = { Accept: "application/json" };
 
   const { data, error, isLoading } = useSWR([url, { headers }], fetcher);
